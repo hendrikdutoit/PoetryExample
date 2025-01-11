@@ -1,9 +1,8 @@
-import poetryprivate
+import poetryexample
 
 
 class TestMyClass:
     def test_init(self):
-
-        status = poetryprivate.MyClass()
+        status = poetryexample.MyClass()
         assert status
         pass
