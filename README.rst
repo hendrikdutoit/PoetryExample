@@ -26,8 +26,8 @@ PoetryExample
     :target: http://unmaintained.tech/
     :alt: Maintenance - intended
 
-.. |license| image:: https://img.shields.io/pypi/l/SQLAlchemyExample
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample/blob/master/LICENSE
+.. |license| image:: https://img.shields.io/pypi/l/PoetryExample
+    :target: https://github.com/hendrikdutoit/PoetryExample/blob/master/LICENSE
     :alt: License
 
 .. |semver| image:: https://img.shields.io/badge/Semantic%20Versioning-2.0.0-brightgreen.svg?style=flat-square
@@ -41,60 +41,60 @@ PoetryExample
 
 .. CI
 
-.. |pre_commit_ci| image:: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/SQLAlchemyExample/pre-commit.yml?label=pre-commit
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample/blob/master/.github/workflows/pre-commit.yml
+.. |pre_commit_ci| image:: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/PoetryExample/pre-commit.yml?label=pre-commit
+    :target: https://github.com/hendrikdutoit/PoetryExample/blob/master/.github/workflows/pre-commit.yml
     :alt: Pre-Commit
 
-.. |gha_tests| image:: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/SQLAlchemyExample/ci.yml?label=ci
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample/blob/master/.github/workflows/ci.yml
+.. |gha_tests| image:: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/PoetryExample/ci.yml?label=ci
+    :target: https://github.com/hendrikdutoit/PoetryExample/blob/master/.github/workflows/ci.yml
     :alt: Test status
 
 .. |gha_docu| image:: https://img.shields.io/readthedocs/sqlalchemyexample
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample/blob/master/.github/workflows/check-rst-documentation.yml
+    :target: https://github.com/hendrikdutoit/PoetryExample/blob/master/.github/workflows/check-rst-documentation.yml
     :alt: Read the Docs
 
-.. |codecov| image:: https://img.shields.io/codecov/c/gh/hendrikdutoit/SQLAlchemyExample
-    :target: https://app.codecov.io/gh/hendrikdutoit/SQLAlchemyExample
+.. |codecov| image:: https://img.shields.io/codecov/c/gh/hendrikdutoit/PoetryExample
+    :target: https://app.codecov.io/gh/hendrikdutoit/PoetryExample
     :alt: CodeCov
 
 
 .. PyPI
 
-.. |pypi_release| image:: https://img.shields.io/pypi/v/SQLAlchemyExample
-    :target: https://pypi.org/project/SQLAlchemyExample/
+.. |pypi_release| image:: https://img.shields.io/pypi/v/PoetryExample
+    :target: https://pypi.org/project/PoetryExample/
     :alt: PyPI - Package latest release
 
-.. |pypi_py_versions| image:: https://img.shields.io/pypi/pyversions/SQLAlchemyExample
-    :target: https://pypi.org/project/SQLAlchemyExample/
+.. |pypi_py_versions| image:: https://img.shields.io/pypi/pyversions/PoetryExample
+    :target: https://pypi.org/project/PoetryExample/
     :alt: PyPI - Supported Python Versions
 
-.. |pypi_format| image:: https://img.shields.io/pypi/wheel/SQLAlchemyExample
-    :target: https://pypi.org/project/SQLAlchemyExample/
+.. |pypi_format| image:: https://img.shields.io/pypi/wheel/PoetryExample
+    :target: https://pypi.org/project/PoetryExample/
     :alt: PyPI - Format
 
-.. |pypi_downloads| image:: https://img.shields.io/pypi/dm/SQLAlchemyExample
-    :target: https://pypi.org/project/SQLAlchemyExample/
+.. |pypi_downloads| image:: https://img.shields.io/pypi/dm/PoetryExample
+    :target: https://pypi.org/project/PoetryExample/
     :alt: PyPI - Monthly downloads
 
-.. |pypi_status| image:: https://img.shields.io/pypi/status/SQLAlchemyExample
-    :target: https://pypi.org/project/SQLAlchemyExample/
+.. |pypi_status| image:: https://img.shields.io/pypi/status/PoetryExample
+    :target: https://pypi.org/project/PoetryExample/
     :alt: PyPI - Status
 
 
 .. GitHub
 
-.. |gh_issues| image:: https://img.shields.io/github/issues-raw/hendrikdutoit/SQLAlchemyExample
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample/issues
+.. |gh_issues| image:: https://img.shields.io/github/issues-raw/hendrikdutoit/PoetryExample
+    :target: https://github.com/hendrikdutoit/PoetryExample/issues
     :alt: GitHub - Issue Counter
 
-.. |gh_language| image:: https://img.shields.io/github/languages/top/hendrikdutoit/SQLAlchemyExample
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample
+.. |gh_language| image:: https://img.shields.io/github/languages/top/hendrikdutoit/PoetryExample
+    :target: https://github.com/hendrikdutoit/PoetryExample
     :alt: GitHub - Top Language
 
-.. |gh_last_commit| image:: https://img.shields.io/github/last-commit/hendrikdutoit/SQLAlchemyExample/master
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample/commit/master
+.. |gh_last_commit| image:: https://img.shields.io/github/last-commit/hendrikdutoit/PoetryExample/master
+    :target: https://github.com/hendrikdutoit/PoetryExample/commit/master
     :alt: GitHub - Last Commit
 
-.. |gh_deployment| image:: https://img.shields.io/github/deployments/hendrikdutoit/SQLAlchemyExample/pypi
-    :target: https://github.com/hendrikdutoit/SQLAlchemyExample/deployments/pypi
+.. |gh_deployment| image:: https://img.shields.io/github/deployments/hendrikdutoit/PoetryExample/pypi
+    :target: https://github.com/hendrikdutoit/PoetryExample/deployments/pypi
     :alt: GitHub - PiPy Deployment

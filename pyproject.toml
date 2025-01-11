@@ -29,22 +29,19 @@ profile = "black"
 [tool.poetry]
 name = 'PoetryExample'
 version = '0.0.1'
-description = 'Wrapper for importing CSV and Text files into MySQL and Postgress'
+description = 'Experimenting with Poetry.'
 authors = [
     "Hendrik du Toit <hendrik@brightedge.co.za>",
 ]
 license = "MIT"
 readme = "README.rst"
 classifiers = [
-    'Development Status :: 5 - Production/Stable',
+    'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',
     'Intended Audience :: Information Technology',
     'Topic :: Software Development',
-    'Topic :: Text Processing',
-    'Topic :: Utilities',
+    'Topic :: System :: Archiving :: Packaging',
     'License :: OSI Approved :: MIT License',
-    'Programming Language :: Python :: 3.10',
-    'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
 ]
 # documentation = "https://readthedocs.org"
