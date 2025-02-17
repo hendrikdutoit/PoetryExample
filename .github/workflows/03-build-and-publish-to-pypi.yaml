@@ -42,8 +42,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
 
-      - name: Debug Environment
-        run: env
+  #      - name: Debug Environment
+  #        run: env
 
   Build-and-Publish:
     needs: Merge
@@ -62,24 +62,41 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-#        with:
-#          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install Poetry & Dependencies
+      - name: Install Poetry
         run: |
-          pip install --upgrade pip
-          pip install poetry
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "PATH=$HOME/.local/bin:$PATH" >> $GITHUB_ENV
+
+      - name: Configure Poetry
+        run: |
+          poetry config keyring.enabled false
+          poetry config http-basic.github.com x-access-token ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
+          # poetry config http-basic.fidewebtourparser __token__ ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
+          # poetry source add --priority=explicit fidewebtourparser https://github.com/RealTimeEvents/fidewebtourparser.git
+          # poetry add git+https://github.com/RealTimeEvents/fidewebtourparser.git
+
+      - name: Install dependencies
+        run: |
           poetry install
 
-      - name: Build package
+      #      - name: Install Poetry & Dependencies
+      #        run: |
+      #          pip install --upgrade pip
+      #          pip install poetry
+      #          poetry install
+
+      - name: Build and publish with Poetry
         run: |
           poetry build
-          ls -la dist  # Just to verify the artifacts exist
+          poetry publish \
+            --username __token__ \
+            --password "${{ secrets.PYPI_API_TOKEN_PROD }}"
 
       - name: New release
         uses: softprops/action-gh-release@v2
@@ -89,16 +106,6 @@ jobs:
           body_path: ${{ github.workspace }}/ReleaseNotes.md
           draft: false
           prerelease: false
-
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}  # or your PyPI API token
-          packages_dir: dist
-          verify_metadata: true  # optional, default: true
-          # skip_existing: false   # optional
-          # attestations: true     # optional
 
   Send-Notice:
     needs: Build-and-Publish
