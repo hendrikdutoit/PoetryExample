@@ -52,4 +52,4 @@ jobs:
           files: coverage.xml
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN_MASTER }}
-          slug: BrightEdgeeServices/PythonTemplateIt
+          slug: hendrikdutoit/PoetryExample
