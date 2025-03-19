@@ -3,7 +3,6 @@
 - Delete
   - Old workflow scripts
   - Install.ps1
-  -
 - Add the reusable workflow from RTE
 - Update
   - .gitignore
