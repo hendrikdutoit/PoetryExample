@@ -1,5 +1,24 @@
 # Release 0.2.0
 
+- Delete
+  - Old workflow scripts
+  - Install.ps1
+  -
+- Add the reusable workflow from RTE
+- Update
+  - .gitignore
+  - pre-commit-config.yaml
+  - InstallDevEnv.ps1
+  - pyproject.toml
+  - README.md
+  - SetupDotEnv.ps1
+  - SetupGitHubAccess.ps1
+  - SetupPrivateRepoAccess.ps1
+
+______________________________________________________________________
+
+# Release 0.2.0
+
 - Minor update to bugfix.md, hotfix.md, 00-deployment-pipeline.yaml
 - Update to .pre-commit-config.yaml
 - Add .rstcheck.cfg and add_private_repo.ps1
