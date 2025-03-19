@@ -1,4 +1,4 @@
-PoetryExample
+# PoetryExample
 
 | **Category** | **Status' and Links**                                                                                                                                                                         |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,7 +15,7 @@ Exploring Poetry.
 [cicd_pre_commit_lnk]: https://github.com/hendrikdutoit/PoetryExample/blob/master/.github/workflows/pre-commit.yml "Pre-Commit"
 [codecov_img]: https://img.shields.io/codecov/c/gh/hendrikdutoit/PoetryExample "CodeCov"
 [codecov_lnk]: https://app.codecov.io/gh/hendrikdutoit/PoetryExample "CodeCov"
-[general_license_img]: https://img.shields.io/pypi/l/PoetryExample "License"
+[general_license_img]: https://img.shields.io/pypi/l/PythonTemplateIt "License"
 [general_license_lnk]: https://github.com/hendrikdutoit/PoetryExample/blob/master/LICENSE "License"
 [general_maintenance_y_img]: https://img.shields.io/badge/Maintenance%20Intended-%E2%9C%94-green.svg?style=flat-square "Maintenance - intended"
 [general_maintenance_y_lnk]: http://unmaintained.tech/ "Maintenance - intended"
@@ -23,7 +23,7 @@ Exploring Poetry.
 [general_semver_pic]: https://img.shields.io/badge/Semantic%20Versioning-2.0.0-brightgreen.svg?style=flat-square "Sentic Versioning - 2.0.0"
 [gh_deployment_img]: https://img.shields.io/github/deployments/hendrikdutoit/PoetryExample/pypi "GitHub - PiPy Deployment"
 [gh_deployment_lnk]: https://github.com/hendrikdutoit/PoetryExample/deployments/pypi "GitHub - PiPy Deployment"
-[gh_doc_img]: https://img.shields.io/readthedocs/PoetryExample "Read the Docs"
+[gh_doc_img]: https://img.shields.io/readthedocs/PythonTemplateIt "Read the Docs"
 [gh_doc_lnk]: https://github.com/hendrikdutoit/PoetryExample/blob/master/.github/workflows/check-rst-documentation.yml "Read the Docs"
 [gh_issues_img]: https://img.shields.io/github/issues-raw/hendrikdutoit/PoetryExample "GitHub - Issue Counter"
 [gh_issues_lnk]: https://github.com/hendrikdutoit/PoetryExample/issues "GitHub - Issue Counter"
@@ -33,11 +33,11 @@ Exploring Poetry.
 [gh_last_commit_lnk]: https://github.com/hendrikdutoit/PoetryExample/commit/master "GitHub - Last Commit"
 [gh_tests_img]: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/PoetryExample/ci.yml?label=ci "Test status"
 [gh_tests_lnk]: https://github.com/hendrikdutoit/PoetryExample/blob/master/.github/workflows/ci.yml "Test status"
-[pypi_downloads_img]: https://img.shields.io/pypi/dm/PoetryExample "Monthly downloads"
-[pypi_downloads_lnk]: https://pypi.org/project/PoetryExample/ "Monthly downloads"
-[pypi_format_img]: https://img.shields.io/pypi/wheel/PoetryExample "PyPI - Format"
-[pypi_format_lnk]: https://pypi.org/project/PoetryExample/ "PyPI - Format"
-[pypi_py_versions_img]: https://img.shields.io/pypi/pyversions/PoetryExample "PyPI - Supported Python Versions"
-[pypi_py_versions_lnk]: https://pypi.org/project/PoetryExample/ "PyPI - Supported Python Versions"
-[pypi_release_img]: https://img.shields.io/pypi/v/PoetryExample "Test status"
-[pypi_release_lnk]: https://pypi.org/project/PoetryExample/ "Test status"
+[pypi_downloads_img]: https://img.shields.io/pypi/dm/PythonTemplateIt "Monthly downloads"
+[pypi_downloads_lnk]: https://pypi.org/project/PythonTemplateIt/ "Monthly downloads"
+[pypi_format_img]: https://img.shields.io/pypi/wheel/PythonTemplateIt "PyPI - Format"
+[pypi_format_lnk]: https://pypi.org/project/PythonTemplateIt/ "PyPI - Format"
+[pypi_py_versions_img]: https://img.shields.io/pypi/pyversions/PythonTemplateIt "PyPI - Supported Python Versions"
+[pypi_py_versions_lnk]: https://pypi.org/project/PythonTemplateIt/ "PyPI - Supported Python Versions"
+[pypi_release_img]: https://img.shields.io/pypi/v/PythonTemplateIt "Test status"
+[pypi_release_lnk]: https://pypi.org/project/PythonTemplateIt/ "Test status"

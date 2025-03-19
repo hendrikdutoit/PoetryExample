@@ -1,40 +1,49 @@
-Write-Host ''
+# SetupPrivateRepoAccess.ps1
 Write-Host ''
 
-function Remove-RepositoryConfiguration
-{
+function Remove-RepositoryConfiguration {
     param (
         [Object]$RepoDetails
     )
     Write-Host "Remove configuration" -ForegroundColor Magenta
-    poetry config ("http-basic." + $RepoDetails.priv_repo_name) --unset
-    poetry source remove $RepoDetails.priv_repo_name
-    poetry remove $RepoDetails.priv_repo_name
+    $command = "poetry source remove $( $RepoDetails.name )"
+    Write-Host "Executing: $command" -ForegroundColor Cyan
+    Invoke-Expression $command
+    $command = "poetry remove $( $RepoDetails.name )"
+    Write-Host "Executing: $command" -ForegroundColor Cyan
+    Invoke-Expression $command
 }
 
-function Remove-AddConfiguration
-{
+function Publish-RepositoryConfiguration {
     param (
         [Object]$RepoDetails
     )
     Write-Host "Add configuration" -ForegroundColor Magenta
-    poetry config ("http-basic." + $RepoDetails.priv_repo_name) ($RepoDetails.priv_repo_user) ($RepoDetails.priv_repo_pwd)
-    poetry source add --priority=explicit $RepoDetails.priv_repo_name ("https://github.com/" + $RepoDetails.priv_repo_org + "/" + $RepoDetails.priv_repo_name + ".git")
-    poetry add ("git+https://github.com/" + $RepoDetails.priv_repo_org + "/" + $RepoDetails.priv_repo_name + ".git")
+    $command = "poetry source add --priority=explicit RTE https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git"
+    Write-Host "Executing: $command" -ForegroundColor Cyan
+    Invoke-Expression $command
+    $command = "poetry add --source RTE git+https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git$( $RepoDetails.version_branch )"
+    Write-Host "Executing: $command" -ForegroundColor Cyan
+    Invoke-Expression $command
+    Write-Host '-2-'
 }
 
+Write-Host ''
 $dateTime = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-Write-Host "=[ START $dateTime ]==========================[ add_private_repo.ps1 ]=" -ForegroundColor Blue
+Write-Host "=[ START $dateTime ]===================[ SetupPrivateRepoAccess.ps1 ]=" -ForegroundColor Blue
+Write-Host "Executing $PSCommandPath..." -ForegroundColor Yellow
+
+# List of keys to configure in Poetry
+poetry config "http-basic.BEE" "__token__" $env:GH_REPO_ACCESS_BEE_LOCAL_USER
+poetry config "http-basic.RTE" "__token__" $env:GH_REPO_ACCESS_RTE_LOCAL_USER
 
 $RepoDetails = [PSCustomObject]@{
-    priv_repo_name = "PoetryPrivate"
-    priv_repo_user = "__token__"
-    priv_repo_pwd = $env:GH_REPO_ACCESS_CURR_USER
-    priv_repo_org = "BrightEdgeeServices"
+    name = "PoetryPrivate"
+    org = "BrightEdgeeServices"
+    version_branch = "#master"
 }
 Remove-RepositoryConfiguration -RepoDetails $RepoDetails
-Remove-AddConfiguration -RepoDetails $RepoDetails
+Publish-RepositoryConfiguration -RepoDetails $RepoDetails
 
-Write-Host '-[ END ]------------------------------------------------------------------------' -ForegroundColor Cyan
-Write-Host ''
+Write-Host '-[ END SetupPrivateRepoAccess.ps1 ]---------------------------------------------' -ForegroundColor Cyan
 Write-Host ''

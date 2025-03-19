@@ -35,9 +35,9 @@ function Show-Help {
 
 if (-not $Pester) {
     Write-Host ''
-    Write-Host ''
     $dateTime = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    Write-Host "=[ START $dateTime ]==================================[ SetupGitHubAccess.ps1 ]=" -ForegroundColor Blue
+    Write-Host "=[ START $dateTime ]========================[ SetupGitHubAccess.ps1 ]=" -ForegroundColor Blue
+    Write-Host "Executing $PSCommandPath..." -ForegroundColor Yellow
     Write-Host "Configure access to https://github.com/$Organization/$RepoName" -ForegroundColor Blue
     if ($ProjectName -eq "" -or $Help) {
         Show-Help
@@ -57,11 +57,16 @@ if (-not $Pester) {
         {
             $Organization = "hendrikdutoit"
         }
+        elseif ($Organization -eq "RTE")
+        {
+            $Organization = "RealTimeEvents"
+        }
 
         if (-not $RepoName) {
             $RepoName = $env:PROJECT_NAME
         }
         git remote set-url origin https://$env:GH_REPO_ACCESS_CURR_USER@github.com/$Organization/$RepoName
     }
-    Write-Host '-[ END ]------------------------------------------------------------------------' -ForegroundColor Cyan
+    Write-Host '-[ END SetupGitHubAccess.ps1 ]--------------------------------------------------' -ForegroundColor Cyan
 }
+Write-Host ''
