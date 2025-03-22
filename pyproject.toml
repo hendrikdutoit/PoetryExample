@@ -97,7 +97,7 @@ url = "https://github.com/BrightEdgeeServices/PoetryPrivate.git"
 priority = "explicit"
 
 [tool.poetry.dependencies]
-poetryprivate = {source = "RTE"}
+poetryprivate = { source = "RTE" }
 
 [tool.pytest.ini_options]
 addopts = [
