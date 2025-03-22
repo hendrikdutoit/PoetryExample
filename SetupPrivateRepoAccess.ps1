@@ -1,7 +1,8 @@
 # SetupPrivateRepoAccess.ps1
 Write-Host ''
 
-function Remove-RepositoryConfiguration {
+function Remove-RepositoryConfiguration
+{
     param (
         [Object]$RepoDetails
     )
@@ -14,15 +15,16 @@ function Remove-RepositoryConfiguration {
     Invoke-Expression $command
 }
 
-function Publish-RepositoryConfiguration {
+function Publish-RepositoryConfiguration
+{
     param (
         [Object]$RepoDetails
     )
     Write-Host "Add configuration" -ForegroundColor Magenta
-    $command = "poetry source add --priority=explicit RTE https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git"
+    $command = "poetry source add --priority=explicit BEE https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git"
     Write-Host "Executing: $command" -ForegroundColor Cyan
     Invoke-Expression $command
-    $command = "poetry add --source RTE git+https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git$( $RepoDetails.version_branch )"
+    $command = "poetry add --source BEE git+https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git$( $RepoDetails.version_branch )"
     Write-Host "Executing: $command" -ForegroundColor Cyan
     Invoke-Expression $command
     Write-Host '-2-'
