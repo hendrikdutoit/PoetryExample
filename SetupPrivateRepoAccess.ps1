@@ -21,7 +21,7 @@ function Publish-RepositoryConfiguration
         [Object]$RepoDetails
     )
     Write-Host "Add configuration" -ForegroundColor Magenta
-    $command = "poetry source add --priority=explicit BEE https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git"
+    $command = "poetry source add --priority=explicit BEE https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name )/"
     Write-Host "Executing: $command" -ForegroundColor Cyan
     Invoke-Expression $command
     $command = "poetry add --source BEE git+https://github.com/$( $RepoDetails.org )/$( $RepoDetails.name ).git$( $RepoDetails.version_branch )"
